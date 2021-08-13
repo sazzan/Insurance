@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".SignupActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_arrow_back_24">
+
+        </ImageButton>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/imageBack"
+            android:text="Signup"
+            android:textColor="@color/blue"
+            android:textSize="20dp"
+            android:textStyle="bold">
+
+        </TextView>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarRl"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbarRl">
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailLabel"
+                android:layout_width="match_parent"
+                app:endIconMode="clear_text"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_height="wrap_content"
+                app:hintEnabled="true">
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="Email*"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress">
+
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mobileLable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_below="@+id/emailLabel"
+                android:layout_marginTop="10dp"
+                app:endIconMode="clear_text"
+                app:hintEnabled="true">
+
+                <EditText
+                    android:id="@+id/mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="mobile*"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:paddingTop="20dp">
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/officelevel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/mobileLable"
+                android:layout_marginTop="10dp"
+                android:clipToPadding="true"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/office"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    app:hintEnabled="true"
+                    app:endIconMode="clear_text">
+
+                    <EditText
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:hint="Office Number"
+                        android:imeOptions="actionNext"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/residentallevel"
+                    android:layout_width="match_parent"
+                    app:endIconMode="clear_text"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="true">
+
+                    <EditText
+                        android:id="@+id/residental"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:hint="Residental Number"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone">
+
+                    </EditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/houseLabel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/officelevel"
+                android:layout_marginTop="10dp"
+                android:clipToPadding="true"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="wrap_content"
+                    app:endIconMode="clear_text"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="true">
+
+                    <EditText
+                        android:id="@+id/House"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:hint="House/Flat*"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        app:hintEnabled="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/streetlevel"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    app:endIconMode="clear_text"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="true">
+
+                    <EditText
+                        android:id="@+id/street"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:hint="street*"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        app:hintEnabled="true">
+
+                    </EditText>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/landmarklevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_below="@+id/houseLabel"
+                android:layout_marginTop="10dp"
+                >
+
+                <EditText
+                    android:id="@+id/landmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:hintEnabled="true"
+                    android:hint="landmark/Area*"
+                    android:imeOptions="actionNext"
+                    android:inputType="text">
+
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/statelevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/landmarklevel">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/state1"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        app:endIconMode="clear_text"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:hintEnabled="true">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:hint="State*"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            app:hintEnabled="true">
+
+                        </EditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/citylevel"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        app:endIconMode="clear_text"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:hintEnabled="true">
+
+                        <EditText
+                            android:id="@+id/city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:hint="City*"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            app:hintEnabled="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pincodelevel"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/statelevel"
+                app:endIconMode="clear_text"
+                android:layout_marginTop="10dp"
+                app:hintEnabled="true">
+
+                <EditText
+                    android:id="@+id/pincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="Pincode*"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    app:hintEnabled="true">
+
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/usernamelevel"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                app:endIconMode="clear_text"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pincodelevel"
+                android:layout_marginTop="10dp"
+                app:hintEnabled="true">
+
+                <EditText
+                    android:id="@+id/username"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="Username*"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    app:hintEnabled="true">
+
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usernamelevel"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="*I hereby agree to the Terms and conditions to create account">
+
+            </CheckBox>
+
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/checkBox"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/lightgreen"
+                android:text="Sign Up" />
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

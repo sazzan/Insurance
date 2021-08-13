@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainPageActivity">
+    <LinearLayout
+        android:id="@+id/insurancetxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+<TextView
+    android:id="@+id/insurancemade"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:text="Insurance Made"
+    android:textSize="30sp"
+    android:textStyle="bold"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="30dp"/>
+
+        <TextView
+            android:id="@+id/simpleforu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Simple for You"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            >
+
+</TextView>
+    </LinearLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+<LinearLayout
+    android:id="@+id/insurancelevel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="120dp">
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="35dp"
+        android:layout_height="350dp"
+        android:background="@drawable/insurance">
+    </ImageView>
+
+    <Button
+        android:id="@+id/buttonlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/lightgreen"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
+        android:text="LOGIN">
+
+    </Button>
+    </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/insurancelevel"
+            >
+
+            <TextView
+                android:id="@+id/newuserlevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="10dp"
+                android:text="New User?" />
+
+            <TextView
+                android:id="@+id/signuplevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="10dp"
+                android:text="SignUp?"
+                android:textStyle="bold"
+                android:textColor="@color/blue" />
+
+            <TextView
+                android:id="@+id/skip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+             android:gravity="center"
+                android:text="Skip"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/blue"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+</ScrollView>
+</RelativeLayout>

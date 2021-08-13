@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:contentPadding="10dp"
+
+    android:id="@+id/cardViewColor"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="18dp"
+    app:cardBackgroundColor="@color/darkpink">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/roundimage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/black">
+
+    </com.makeramen.roundedimageview.RoundedImageView>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Adobe XD protyping"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="1dp"
+            android:text="10 hours,19 lessons"
+            android:textColor="@color/lightpink"
+            android:textSize="13sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+           android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_play_circle_outline_24">
+
+        </ImageButton>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
